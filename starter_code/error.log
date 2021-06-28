@@ -4415,3 +4415,235 @@ LINE 1: ...tist_name, venue_name, artist_image_link) VALUES ('jjjj', 'j...
 2021-06-23 18:06:08,646 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:356]
 2021-06-23 18:25:46,634 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:377]
 2021-06-23 18:25:48,925 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:377]
+2021-06-27 18:16:38,518 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:361]
+2021-06-27 18:16:52,137 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:361]
+2021-06-27 18:17:00,808 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:361]
+2021-06-27 18:20:21,608 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:361]
+2021-06-27 18:20:45,600 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:361]
+2021-06-27 18:30:00,372 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 18:35:29,365 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 18:35:32,721 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 18:35:37,679 ERROR: Exception on /venues/1/edit [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 246, in edit_venue
+    venues=session.query(Venue).get(venue_id)
+  File "<string>", line 2, in get
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\util\deprecations.py", line 390, in warned
+    return fn(*args, **kwargs)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 935, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 939, in _get_impl
+    return self.session._get_impl(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2782, in _get_impl
+    return db_load_fn(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\loading.py", line 531, in load_on_pk_identity
+    session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Venue->Venue, SQL expression or this Session.
+2021-06-27 18:35:40,031 ERROR: Exception on /venues [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 107, in venues
+    result = session.query(Venue).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Venue->Venue, SQL expression or this Session.
+2021-06-27 18:35:43,317 ERROR: Exception on /shows [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 320, in shows
+    data=session.query(Show).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Show->show, SQL expression or this Session.
+2021-06-27 18:36:14,221 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 18:36:19,559 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 18:36:23,720 ERROR: Exception on /venues [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 107, in venues
+    result = session.query(Venue).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Venue->Venue, SQL expression or this Session.
+2021-06-27 18:36:24,658 ERROR: Exception on /artists [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 178, in artists
+    result=session.query(Artist).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Artist->artist, SQL expression or this Session.
+2021-06-27 18:36:25,130 ERROR: Exception on /shows [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 320, in shows
+    data=session.query(Show).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Show->show, SQL expression or this Session.
+2021-06-27 18:36:46,460 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 18:38:09,076 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 18:38:12,560 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 18:38:16,777 ERROR: Exception on /venues [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 107, in venues
+    result = session.query(Venue).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Venue->Venue, SQL expression or this Session.
+2021-06-27 18:38:18,098 ERROR: Exception on /artists [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 178, in artists
+    result=session.query(Artist).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Artist->artist, SQL expression or this Session.
+2021-06-27 22:03:56,936 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 22:05:13,142 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 22:06:47,023 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 22:06:49,679 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 22:08:10,789 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:359]
+2021-06-27 22:08:13,267 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:359]
+2021-06-27 22:09:35,713 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:359]
+2021-06-27 22:09:39,786 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:359]
+2021-06-27 22:11:46,980 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:359]
+2021-06-27 22:11:50,036 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:359]
+2021-06-27 22:14:00,741 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 22:14:04,902 INFO: errors [in C:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]

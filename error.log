@@ -15624,3 +15624,75 @@ Traceback (most recent call last):
   File "c:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 135, in show_venue
     pastShow=session.query(Show).filter(Show.start_time < datetime(),Show.venue_id==venue_id).all()
 TypeError: function missing required argument 'year' (pos 1)
+2021-06-27 21:29:09,064 INFO: errors [in c:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 22:03:45,683 INFO: errors [in c:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 22:05:24,288 ERROR: Exception on /venues [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 107, in venues
+    result = session.query(Venue).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Venue->Venue, SQL expression or this Session.
+2021-06-27 22:06:05,307 ERROR: Exception on /venues [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 107, in venues
+    result = session.query(Venue).all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2685, in all
+    return self._iter().all()
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2820, in _iter
+    result = self.session.execute(
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 1667, in execute
+    bind = self.get_bind(**bind_arguments)
+  File "C:\Users\samis\anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2051, in get_bind
+    raise sa_exc.UnboundExecutionError(
+sqlalchemy.exc.UnboundExecutionError: Could not locate a bind configured on mapper mapped class Venue->Venue, SQL expression or this Session.
+2021-06-27 22:06:41,192 INFO: errors [in c:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
+2021-06-27 22:06:55,072 ERROR: Exception on /venues [GET] [in C:\Users\samis\anaconda3\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\samis\anaconda3\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\Users\samis\myflask\01_fyyur\starter_code\app.py", line 107, in venues
+    result = Venue.query().all()
+TypeError: 'BaseQuery' object is not callable
+2021-06-27 22:08:04,971 INFO: errors [in c:\Users\samis\myflask\01_fyyur\starter_code\app.py:359]
+2021-06-27 22:13:54,274 INFO: errors [in c:\Users\samis\myflask\01_fyyur\starter_code\app.py:358]
