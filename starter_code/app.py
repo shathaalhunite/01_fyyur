@@ -9,21 +9,16 @@ from flask_sqlalchemy import SQLAlchemy
 import logging
 from logging import DEBUG, Formatter, FileHandler
 from forms import VenueForm ,ArtistForm,ShowForm  
-from sqlalchemy import create_engine, Integer
-from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 from flask_migrate  import Migrate
 from models import Artist,Venue,Show
 
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Shosho11@localhost:5432/postgres'
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db, compare_type=True)
 moment = Moment(app)
-SECRET_KEY = os.urandom(32)
-app.config['SECRET_KEY'] = SECRET_KEY;
+app.config.from_pyfile('config.py') 
 app.config.from_object('config')
 
 
